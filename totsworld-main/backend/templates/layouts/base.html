@@ -1,0 +1,54 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <title>{% block title %}{% endblock %}</title>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bubblegum: '#ffd3db',
+            cream : '#fffdf9',
+          },
+          fontFamily: {
+            'bebas-neue': ['Bebas Neue', 'sans-serif'],
+          },
+          screens: {
+            'sm': '640px',
+            // => @media (min-width: 640px) { ... }
+      
+            'md': '768px',
+            // => @media (min-width: 768px) { ... }
+      
+            'lg': '1024px',
+            // => @media (min-width: 1024px) { ... }
+      
+            'xl': '1280px',
+            // => @media (min-width: 1280px) { ... }
+      
+            '2xl': '1536px',
+            // => @media (min-width: 1536px) { ... }
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="">
+    {% include './nav.html' %}
+    {% block content %}{% endblock  %}
+    {% include './footer.html' %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
