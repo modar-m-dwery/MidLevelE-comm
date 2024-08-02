@@ -20,7 +20,7 @@ MidLevelE-comm  is a robust e-commerce platform built with React on the frontend
 
 ## Features
 
-- **User Authentication**: Secure user login and registration..
+- **User Authentication**: Secure user login and registration for customer and shop manager..
 - **Product Browsing**: Browse products with detailed descriptions and images.
 - **Shopping Cart**:  Add, remove, and update items in the shopping cart.
 - **Checkout Process**:  Complete orders with PayPal payment integration.
